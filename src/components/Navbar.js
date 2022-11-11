@@ -7,7 +7,7 @@ export default function Navbar() {
     return (
       <nav className="navigation">
         <a href="/" className="brand-name">
-          MacroSoft
+          My Portfolio
         </a>
         <button
           className="hamburger"
