@@ -1,16 +1,14 @@
 import './App.css';
+import Footer from './components/Footer';
 import Navbar from "./components/Navbar";
+import ProjectsDisplay from './components/ProjectsDisplay';
 
 function App() {
   return (
     <div className="App">
      <Navbar />
-      <div className="container">
-        <article>
-          <h1>Navjot Singh </h1>
-          Software Developer
-        </article>
-      </div>
+     <ProjectsDisplay />
+     <Footer />
     </div>
   );
 }
