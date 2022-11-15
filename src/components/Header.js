@@ -42,10 +42,10 @@ export default function Header() {
         <Typography variant="h5" align="center" color="text.secondary" paragraph>
             Junior Software Developer
         </Typography>
-        <Typography variant="body1" align="center" display="block" style={{ lineHeight: "8px" }} color="text.secondary" paragraph>
+        <Typography variant="body1" align="center" display="block" color="text.secondary" paragraph>
             Currently working at Cryopak, Montreal (June 2021 - Present)
         </Typography>
-        <Typography variant="body1" align="center" display="block" style={{ lineHeight: "8px" }} color="text.secondary" paragraph>
+        <Typography variant="body1" align="center" display="block" color="text.secondary" paragraph>
             Graduated from Lasalle College, Montreal as a Programmer Analyst
         </Typography>
         <Stack
