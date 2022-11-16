@@ -17,12 +17,18 @@ export default function ProjectsDisplay() {
         sx={{ py: 8 }}
          maxWidth="md">
           <Grid container spacing={4}>
-              {ProjectsList.map((project)=>{
+              {ProjectsList.map((project, index)=>{
                   return(
-                    <CardView 
-                      title={project.title} 
-                      description={project.desc}
-                      image={project.image}/>
+                    <React.Fragment key={index}>
+                      <CardView
+                        num={index} 
+                        title={project.title} 
+                        description={project.desc}
+                        image={project.image}
+                        preview={project.preview}
+                        github={project.github}
+                        />
+                    </React.Fragment>
                   )
               })}
           </Grid>
