@@ -53,27 +53,31 @@ export default function CardView({ num, title, description, image, preview, gith
                 </Typography>
             </CardContent>
             <CardActions>
-                {preview === "" ? <Button onClick={handleOpen} size="small">Preview</Button>
-                 : <Button href={preview} size="small">Preview</Button>
+                {preview.startsWith('https') ? <Button href={preview} size="small">Preview</Button>
+                 : 
+                 <>
+                  <Button onClick={handleOpen} size="small">Preview</Button>
+                    <Modal
+                      open={open}
+                      onClose={handleClose}
+                      aria-labelledby="modal-modal-title"
+                      aria-describedby="modal-modal-description"
+                    >
+                      <Box sx={style}>
+                      <CardMedia
+                        component="img"
+                        // sx={{
+                        // // 16:9
+                        //   pt: '10%',
+                        // }}
+                        image={preview}
+                        alt="preview"
+                        />
+                      </Box>
+                    </Modal>
+                 </>
                 }
-                <Modal
-                  open={open}
-                  onClose={handleClose}
-                  aria-labelledby="modal-modal-title"
-                  aria-describedby="modal-modal-description"
-                >
-                  <Box sx={style}>
-                  <CardMedia
-                    component="img"
-                    // sx={{
-                    // // 16:9
-                    //   pt: '10%',
-                    // }}
-                    image={image}
-                    alt="random"
-                    />
-                  </Box>
-                </Modal>
+                
                 <Button href={github} size="small">Github</Button>
             </CardActions>
           </Card>

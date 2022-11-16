@@ -10,7 +10,7 @@ export const ProjectsList = [
         title: "Bored App",
         desc: "Shows activities to do when you are feeling bored",
         image: "./assets/url-shortener.png",
-        preview: "",
+        preview: "./assets/BoredApp-android-app.gif",
         github: "https://github.com/navjotSingh2000/BoredApp"
     },
     {
