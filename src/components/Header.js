@@ -6,6 +6,12 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Axios from "axios";
 import FileDownload from "js-file-download";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
+const social = {
+  height: 45, width: 45, mx:1, cursor:'pointer'
+};
 
 const DownloadResume = async(e) => {
     await Axios({
@@ -56,6 +62,12 @@ export default function Header() {
         >
             <Button variant="outlined" onClick={()=>DownloadResume()} size="small">Download Resume</Button>
         </Stack>
+        <Typography variant="body1" align="center" display="block" color="text.secondary" paragraph
+        sx={{ pt: 6 }}
+          >
+            <LinkedInIcon onClick={()=>window.open('https://www.linkedin.com/in/navjotsingh5')} sx={social}/>
+            <GitHubIcon onClick={()=>window.open('https://github.com/navjotSingh2000')} sx={social}/>
+        </Typography>
         </Container>
     </Box>
   )

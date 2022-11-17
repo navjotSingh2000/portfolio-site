@@ -14,7 +14,7 @@ export default function ProjectsDisplay() {
       <CssBaseline />
       <main>
         <Container 
-        sx={{ py: 8 }}
+        sx={{ pb: 6 }}
          maxWidth="md">
           <Grid container spacing={4}>
               {ProjectsList.map((project, index)=>{
