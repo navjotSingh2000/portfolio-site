@@ -22,7 +22,6 @@ const DownloadResume = async(e) => {
       FileDownload(res.data, "resume-navjot-singh.pdf")
     }).catch((error)=>{
       console.log(error.response)
-      return error.response
     })
   }
 
@@ -38,7 +37,7 @@ const LogToEmail = async() => {
       "message" : "Somebody opened the Portfolio website"
     }
   }).then((res)=>{
-    console.log(res.data)
+   // console.log(res.data)
   }).catch((error)=>{
     console.log(error)
   })
