@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
@@ -26,7 +26,30 @@ const DownloadResume = async(e) => {
     })
   }
 
+const LogToEmail = async() => {
+  await Axios({
+    url: "https://smtp-sb.herokuapp.com/email",
+    method: "POST",
+    responseType: "json",
+    data: {
+      "name" : "Visitor",
+      "email" : "",
+      "subject" : "Portfolio Accessed",
+      "message" : "Somebody opened the Portfolio website"
+    }
+  }).then((res)=>{
+    console.log(res.data)
+  }).catch((error)=>{
+    console.log(error)
+  })
+}  
+
 export default function Header() {
+
+  useEffect(()=>{
+    LogToEmail();
+  },[])
+
   return (
     <Box
         sx={{
