@@ -16,7 +16,7 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 400,
-  bgcolor: 'background.paper',
+ // bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
@@ -28,16 +28,17 @@ export default function CardView({ num, title, description, image, preview, gith
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+
   return (
         <Grid item key={num} xs={12} sm={6} md={4}>
           <Card
-            sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+            sx={{ height: '100%', display: 'flex', flexDirection: 'column', backgroundColor:"background.default" }}
             >
             <CardMedia
                 component="img"
                 sx={{
                 // 16:9
-                  pt: '10%',
+                //  pt: '10%',
                 }}
                 image={image}
                 alt="random"
@@ -45,10 +46,10 @@ export default function CardView({ num, title, description, image, preview, gith
             <CardContent 
             // sx={{ flexGrow: 1 }}
             >
-                <Typography gutterBottom variant="h5" component="h2">
+                <Typography color="text.secondary" gutterBottom variant="h5" component="h2">
                   {title}
                 </Typography>
-                <Typography>
+                <Typography color="text.secondary">
                   {description}
                 </Typography>
             </CardContent>

@@ -52,7 +52,7 @@ export default function Header() {
   return (
     <Box
         sx={{
-        bgcolor: 'background.paper',
+      //  bgcolor: 'background.paper',
         pt: 8,
         pb: 6,
         }}
