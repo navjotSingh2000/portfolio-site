@@ -73,6 +73,7 @@ export default function CardView({ num, title, description, image, preview, gith
                         // }}
                         image={preview}
                         alt="preview"
+                        onClick={handleClose}
                         />
                       </Box>
                     </Modal>
