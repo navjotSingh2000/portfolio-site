@@ -1,88 +1,94 @@
-import React from 'react'
-import { useState } from 'react';
-import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import Grid from '@mui/material/Grid';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
+import React, { useState } from "react";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import Grid from "@mui/material/Grid";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import {
+  cardStyles,
+  modalStyles,
+  instructionsContainerStyles,
+  imageContainerStyles,
+  imageStyles,
+  previewImageStyles,
+} from "./styles/CarViewStyles";
 
-const style = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: 400,
- // bgcolor: 'background.paper',
-  border: '2px solid #000',
-  boxShadow: 24,
-  p: 4,
-};
-
-export default function CardView({ num, title, description, image, preview, github }) {
-
+export default function CardView({
+  num,
+  title,
+  description,
+  image,
+  preview,
+  github,
+}) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-
   return (
-        <Grid item key={num} xs={12} sm={6} md={4}>
-          <Card
-            sx={{ height: '100%', display: 'flex', flexDirection: 'column', backgroundColor:"background.default" }}
-            >
-            <CardMedia
-                component="img"
-                sx={{
-                // 16:9
-                //  pt: '10%',
-                }}
-                image={image}
-                alt="random"
-            />
-            <CardContent 
-            // sx={{ flexGrow: 1 }}
-            >
-                <Typography color="text.secondary" gutterBottom variant="h5" component="h2">
-                  {title}
-                </Typography>
-                <Typography color="text.secondary">
-                  {description}
-                </Typography>
-            </CardContent>
-            <CardActions>
-                {preview.startsWith('https') ? <Button href={preview} size="small">Preview</Button>
-                 : 
-                 <>
-                  <Button onClick={handleOpen} size="small">Preview</Button>
-                    <Modal
-                      open={open}
-                      onClose={handleClose}
-                      aria-labelledby="modal-modal-title"
-                      aria-describedby="modal-modal-description"
-                    >
-                      <Box sx={style}>
-                      <CardMedia
-                        component="img"
-                        // sx={{
-                        // // 16:9
-                        //   pt: '10%',
-                        // }}
-                        image={preview}
-                        alt="preview"
-                        onClick={handleClose}
-                        />
-                      </Box>
-                    </Modal>
-                 </>
-                }
-                
-                <Button href={github} size="small">Github</Button>
-            </CardActions>
-          </Card>
-        </Grid>
-  )
+    <Grid item key={num} xs={12} sm={6} md={4}>
+      <Card style={cardStyles}>
+        <CardMedia
+          component="img"
+          style={imageStyles}
+          image={image}
+          alt={title}
+        />
+        <CardContent>
+          <Typography
+            style={{ color: "black" }}
+            gutterBottom
+            variant="h5"
+            component="h2"
+          >
+            {title}
+          </Typography>
+          <Typography style={{ color: "black" }} paragraph>
+            {description}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          {preview.startsWith("https") ? (
+            <Button href={preview} size="small">
+              Preview
+            </Button>
+          ) : (
+            <>
+              <Button onClick={handleOpen} size="small">
+                Preview
+              </Button>
+              <Modal
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+              >
+                <Box style={modalStyles}>
+                  <Box style={instructionsContainerStyles}>
+                    Tap or click to close
+                  </Box>
+                  <Box style={imageContainerStyles}>
+                    <CardMedia
+                      component="img"
+                      style={previewImageStyles}
+                      image={preview}
+                      alt="preview"
+                      onClick={handleClose}
+                    />
+                  </Box>
+                </Box>
+              </Modal>
+            </>
+          )}
+          <Button href={github} size="small">
+            Github
+          </Button>
+        </CardActions>
+      </Card>
+    </Grid>
+  );
 }
