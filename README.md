@@ -11,4 +11,4 @@ Welcome to my portfolio! Here, you’ll find a selection of my projects that sho
 
 **Links:**
 
-- **Live Preview**: [https://navjotsingh.net](#)
+- **Live Preview**: [https://navjotsingh.net](https://navjotsingh.net)

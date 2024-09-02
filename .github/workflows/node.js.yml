@@ -29,6 +29,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
-        env:
           REACT_APP_RESUME_URL: ${{ secrets.REACT_APP_RESUME_URL }}
           REACT_APP_CHECK_NOTI: ${{ secrets.REACT_APP_CHECK_NOTI }}
