@@ -86,7 +86,7 @@ export default function Header() {
           color="text.secondary"
           paragraph
         >
-          Junior Software Developer
+          Web Software Developer
         </Typography>
         <Typography
           variant="body1"
