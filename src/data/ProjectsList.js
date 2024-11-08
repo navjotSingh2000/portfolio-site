@@ -24,7 +24,7 @@ export const ProjectsList = [
     title: "URL Shortener",
     desc: "Spring Boot REST API to shorten a URL",
     image: "./assets/url-shortener-thumbnail.png",
-    preview: "https://ns-sb.herokuapp.com",
+    preview: "./assets/url-shortener-thumbnail.png",
     github: "https://github.com/navjotSingh2000/url-shortener-spring-boot",
   },
   {
@@ -40,13 +40,6 @@ export const ProjectsList = [
     image: "./assets/furniture-store-website-thumbnail.png",
     preview: "https://youtu.be/84NI2k-HvH8",
     github: "https://github.com/navjotSingh2000/furniture-store-website",
-  },
-  {
-    title: "Spring Boot Resume REST service",
-    desc: "Makes a GET Request to the spring boot project, in reponse you get the Resume",
-    image: "./assets/resume-service-thumbnail.png",
-    preview: "https://resume-navjot-singh.herokuapp.com",
-    github: "https://github.com/navjotSingh2000/portfolio-resume-service",
   },
   {
     title: "Weather App",
