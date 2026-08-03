@@ -29,15 +29,10 @@ jobs:
 
       - name: Build project
         run: npm run build --if-present
-        # env:
-        #   REACT_APP_RESUME_URL: ${{ secrets.REACT_APP_RESUME_URL }}
-        #   REACT_APP_CHECK_NOTI: ${{ secrets.REACT_APP_CHECK_NOTI }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build
+          folder: dist
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub automatically provides this token
-          # REACT_APP_RESUME_URL: ${{ secrets.REACT_APP_RESUME_URL }}
-          # REACT_APP_CHECK_NOTI: ${{ secrets.REACT_APP_CHECK_NOTI }}
