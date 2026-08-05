@@ -78,7 +78,7 @@ export default function Hero() {
             }}
             className="group inline-flex items-center gap-2 border border-line-strong px-3.5 py-2 font-mono text-xs transition-colors duration-300 hover:border-accent hover:bg-accent hover:text-ink md:text-sm"
           >
-            View Resume
+            Resume
             <span
               aria-hidden="true"
               className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
