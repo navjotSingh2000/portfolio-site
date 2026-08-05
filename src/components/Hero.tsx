@@ -73,6 +73,9 @@ export default function Hero() {
             href={profile.resumeUrl}
             target="_blank"
             rel="noreferrer"
+            onClick={(e) => {
+              e.currentTarget.href = `${profile.resumeUrl}?t=${Date.now()}`;
+            }}
             className="group inline-flex items-center gap-2 border border-line-strong px-3.5 py-2 font-mono text-xs transition-colors duration-300 hover:border-accent hover:bg-accent hover:text-ink md:text-sm"
           >
             View Resume

@@ -23,6 +23,9 @@ export default function Footer() {
               href={profile.resumeUrl}
               target="_blank"
               rel="noreferrer"
+              onClick={(e) => {
+                e.currentTarget.href = `${profile.resumeUrl}?t=${Date.now()}`;
+              }}
               className="link-underline text-fg-muted transition-colors duration-300 hover:text-fg"
             >
               Resume ↗

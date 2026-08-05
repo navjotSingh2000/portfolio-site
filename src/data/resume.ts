@@ -7,7 +7,8 @@ export const profile = {
   email: "abcnavjot2000@gmail.com",
   github: "https://github.com/navjotSingh2000?tab=repositories",
   linkedin: "https://www.linkedin.com/in/navjotsingh5",
-  resumeUrl: `/Navjot_Singh_Resume.pdf?v=${__RESUME_VERSION__}`,
+  resumeUrl:
+    "https://github.com/navjotSingh2000/portfolio-site/releases/download/resume/Navjot_Singh_Resume.pdf",
   tagline:
     "I design and develop software across web, desktop, and connected systems, turning complex requirements into reliable, scalable solutions.",
 } as const;
