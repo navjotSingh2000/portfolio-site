@@ -84,17 +84,7 @@ export const projects: Project[] = [
     context: "Personal",
     description:
       "Document platform with real-time collaboration, secure file storage, and role-based access control.",
-    tags: [
-      "C#",
-      "ASP.NET Core",
-      "React",
-      "TypeScript",
-      "SignalR",
-      "PostgreSQL",
-      "Redis",
-      "Docker",
-      "AWS S3",
-    ],
+    tags: ["Real-Time Collaboration", "Document Management", "Access Control"],
   },
 ];
 
@@ -105,14 +95,14 @@ export interface SkillGroup {
 
 export const skillGroups: SkillGroup[] = [
   {
-    label: "Languages",
-    items: ["C#", ".NET", "Java", "React", "TypeScript", "Node.js", "PHP"],
+    label: "Languages & Frameworks",
+    items: ["Java", "Spring Boot", "C#", ".NET", "React", "TypeScript", "Node.js", "PHP"],
   },
   {
     label: "Databases",
     items: [
-      "PostgreSQL",
       "MySQL",
+      "PostgreSQL",
       "SQL Server",
       "MongoDB",
       "Redis",
