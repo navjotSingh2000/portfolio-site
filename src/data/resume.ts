@@ -16,7 +16,7 @@ export const profile = {
 export const about = {
   statement: "Software for regulated industries.",
   paragraphs: [
-    "Software developer based in Montréal with 5+ years of experience delivering full-stack applications, integrations, and business-critical systems. Experienced with C#/.NET, Java, React, TypeScript, Node.js, and PHP, with a focus on scalable architecture, reliable APIs, and long-term maintainability.",
+    "Software developer based in Montréal with 5+ years of experience delivering full-stack applications, integrations, and business-critical systems. Experienced with Java/Spring Boot, C#/.NET, React, TypeScript, Node.js, and PHP, with a focus on scalable architecture, reliable APIs, and long-term maintainability.",
   ],
 };
 
@@ -96,7 +96,16 @@ export interface SkillGroup {
 export const skillGroups: SkillGroup[] = [
   {
     label: "Languages & Frameworks",
-    items: ["Java", "Spring Boot", "C#", ".NET", "React", "TypeScript", "Node.js", "PHP"],
+    items: [
+      "Java",
+      "Spring Boot",
+      "C#",
+      ".NET",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PHP",
+    ],
   },
   {
     label: "Databases",
